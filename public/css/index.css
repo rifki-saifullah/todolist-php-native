@@ -1,0 +1,242 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  padding: 0 15%;
+  background-image: url("../img/hp.jpg");
+  background-attachment: fixed;
+  /* background-color: #053b50; */
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+nav {
+  width: 100%;
+  padding: 10px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: end;
+  gap: 40px;
+}
+
+nav ul li {
+  color: #eeeeee;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav ul li a:hover {
+  color: #64ccc5;
+  transition: 0.3s;
+}
+
+header {
+  padding: 20px 0;
+  color: #eeeeee;
+}
+
+main .todolist {
+  width: 100%;
+  background-color: #eeeeee;
+  padding: 10px 10%;
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+  position: relative;
+  margin-bottom: 2%;
+  border-radius: 10px;
+}
+
+main .todolist:hover {
+  transform: translateX(10px);
+  box-shadow: 4px 5px 3px #176b87;
+  transition: 0.3s;
+}
+
+main .todolist h3 {
+  align-self: center;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+main .todolist .date {
+  display: flex;
+  gap: 10%;
+}
+
+main .todolist .finish {
+  position: absolute;
+  display: flex;
+  justify-self: right;
+  align-self: center;
+  margin-right: 5%;
+  width: 40px;
+  height: 40px;
+  background-color: #176b87;
+  color: #eeeeee;
+  border-radius: 50%;
+  text-decoration: none;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-todo-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #eeeeee;
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  font-size: 1.7em;
+  text-decoration: none;
+  text-align: center;
+  line-height: 45px;
+  color: #176b87;
+  border: 1px solid #053b50;
+  cursor: pointer;
+  z-index: 99;
+}
+
+.add-todo-button:hover {
+  box-shadow: -2px 3px 2px rgb(23, 107, 135);
+  transition: 0.5s;
+}
+
+.input-todo {
+  width: 100vw;
+  height: 100vh;
+  z-index: 9;
+  position: fixed;
+  bottom: 100%;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggle {
+  bottom: 0;
+  transition: 0.3s;
+}
+
+.input-table {
+  min-width: 60%;
+  height: 400px;
+  background-color: rgba(5, 59, 80);
+  box-shadow: -3px 3px 5px rgba(23, 107, 135, 0.8);
+  border-radius: 10px;
+  padding: 3% 5%;
+}
+
+.input-table h2 {
+  text-align: center;
+  color: #eeeeee;
+}
+
+.input-table form {
+  display: flex;
+  flex-direction: column;
+  color: #eeeeee;
+  gap: 20px;
+}
+
+.input-table form input {
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid #eeeeee;
+  height: 20px;
+  color: #eeeeee;
+  outline: none;
+  font-size: 1em;
+}
+
+.input-table form button {
+  cursor: pointer;
+  width: 100px;
+  height: 30px;
+  margin: auto;
+  background-color: #eeeeee;
+  color: #053b50;
+  border-radius: 5px;
+}
+
+.input-table form button:hover {
+  background-color: #fff;
+  transition: 0.3s;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    padding: 0 5%;
+  }
+
+  nav ul li p {
+    font-size: 0.8em;
+  }
+
+  nav ul li a {
+    font-size: 0.8em;
+  }
+
+  header h1 {
+    font-size: 1.4em;
+  }
+
+  header h2 {
+    font-size: 1.2em;
+  }
+
+  main .todolist {
+    padding: 5px 5%;
+  }
+
+  main .todolist h3 {
+    font-size: 1em;
+  }
+
+  main .todolist .date p {
+    font-size: 0.8em;
+  }
+
+  main .todolist .finish {
+    font-size: 0.7em;
+    margin-right: 5%;
+    width: 30px;
+    height: 30px;
+  }
+
+  .add-todo {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2em;
+    line-height: 35px;
+  }
+
+  main .todolist:hover {
+    transform: translateX(5px);
+    box-shadow: 4px 5px 3px #176b87;
+    transition: 0.3s;
+  }
+
+  .input-table {
+    min-width: 80%;
+    padding: 14% 5%;
+    height: 400px;
+  }
+
+  .input-table form {
+    gap: 15px;
+  }
+}
